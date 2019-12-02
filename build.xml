@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Défininition d'un script de build avec pct -->
+<project name="AntTest" 
+    xmlns:if="ant:if"
+    xmlns:unless="ant:unless"
+    >
+
+    <taskdef resource="PCT.properties" classpath="D:\Outils\pct\213\PCT.jar" loaderRef="pct" />
+    <taskdef resource="extras115.properties" classpath="D:\Outils\pct\213\PCT.jar" loaderRef="pct" />
+	
+    <property name="DLC" value="D:\Outils\Openedge\OE1174" />
+
+   <target name="compile">
+        <mkdir dir="preprocess" />
+       	<PCTCompile destDir="rcode" preprocessDir="preprocess" dlcHome="${DLC}">
+       	  <fileset dir="src" includes="**/*.cls,**/*.p" />
+       	  <propath path="src" />
+       	</PCTCompile>
+       	
+   	</target>
+
+    <target name="doc">
+        <mkdir dir="doc" />
+        <ABLDuck destDir="doc" dlcHome="${DLC}" title="My Documentation">
+            <fileset dir="preprocess" includes="**/*.cls,**/*.p" />
+            <propath path="preprocess" />
+        </ABLDuck>
+    </target>
+
+</project>
