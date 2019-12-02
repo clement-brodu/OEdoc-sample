@@ -30,7 +30,7 @@ CLASS Hello.Father:
     END METHOD.
 
     /*------------------------------------------------------------------------------
-     Purpose: Allé on y va
+     Purpose: Bien joué ! 
      Notes:
         @param pSteps number steps
     ------------------------------------------------------------------------------*/

@@ -14,7 +14,7 @@ USING Hello.Father FROM PROPATH.
 
 BLOCK-LEVEL ON ERROR UNDO, THROW.
 
-CLASS Hello.Son INHERITS Father: 
+CLASS Hello.Son INHERITS Father IMPLEMENTS Hello.ITruc: 
  
     /*------------------------------------------------------------------------------
      Purpose: Say Hello from son
@@ -27,5 +27,9 @@ CLASS Hello.Son INHERITS Father:
         RETURN.
 
     END METHOD.
+    
+     METHOD PUBLIC CHARACTER getFamily(  ) :
+         RETURN "Skywalker".
+     END METHOD.
     
 END CLASS.

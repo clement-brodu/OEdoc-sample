@@ -10,10 +10,11 @@
   ----------------------------------------------------------------------*/
 
 USING Progress.Lang.*.
+USING Hello.ITruc FROM PROPATH.
 
 BLOCK-LEVEL ON ERROR UNDO, THROW.
 
-CLASS Hello.Daughter INHERITS Hello.Father: 
+CLASS Hello.Daughter INHERITS Hello.Father IMPLEMENTS ITruc : 
      
     /*------------------------------------------------------------------------------
      Purpose: Say Hello from Daughter
@@ -26,5 +27,9 @@ CLASS Hello.Daughter INHERITS Hello.Father:
         RETURN.
 
     END METHOD.
+
+     METHOD PUBLIC CHARACTER getFamily(  ) :
+         RETURN "Skywalker".
+     END METHOD.
 
 END CLASS.
