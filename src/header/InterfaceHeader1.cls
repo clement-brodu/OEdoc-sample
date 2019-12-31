@@ -1,23 +1,25 @@
 
 /*------------------------------------------------------------------------
-    File        : ITruc
-    Purpose     : 
+    File        : InterfaceHeader1
+    Purpose     : Purpose of InterfaceHeader1
     Syntax      : 
-    Description : 
+    Description : Description of InterfaceHeader1
     Author(s)   : Han Solo
-    Created     : Mon Dec 02 19:29:21 CET 2019
+    Created     : Tue Dec 31 17:48:48 CET 2019
     Notes       : 
   ----------------------------------------------------------------------*/
 
 USING Progress.Lang.*.
 
-INTERFACE Hello.ITruc:  
+INTERFACE header.InterfaceHeader1: 
+    
+     
   
     /*------------------------------------------------------------------------------
-     Purpose:
-     Notes:
+     Purpose: Purpose of Method1
+     Notes: Note of Method1
     ------------------------------------------------------------------------------*/
 
-    METHOD PUBLIC CHARACTER getFamily(  ).
+    METHOD PUBLIC VOID Method1(  ).
 
 END INTERFACE.

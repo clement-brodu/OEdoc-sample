@@ -4,7 +4,7 @@
     Purpose     : THE SON
     Syntax      : 
     Description : 
-    Author(s)   : cbr
+    Author(s)   : Han Solo
     Created     : Mon Dec 02 16:34:10 CET 2019
     Notes       : 
   ----------------------------------------------------------------------*/
