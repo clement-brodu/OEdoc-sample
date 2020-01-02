@@ -14,6 +14,17 @@ USING Progress.Lang.*.
 BLOCK-LEVEL ON ERROR UNDO, THROW.
 
 CLASS static.StaticCommentClass: 
+
+	/*------------------------------------------------------------------------------
+     Purpose: Purpose of the constructor
+     Notes: Notes of constructor  
+            Notes line 2
+    ------------------------------------------------------------------------------*/
+        
+    CONSTRUCTOR STATIC StaticCommentClass (  ):
+        SUPER ().
+        
+    END CONSTRUCTOR.
     
     /*------------------------------------------------------------------------------
      Purpose: Purpose of ttPrivStatic
@@ -21,7 +32,7 @@ CLASS static.StaticCommentClass:
     ------------------------------------------------------------------------------*/
     DEFINE PRIVATE STATIC TEMP-TABLE ttPrivStatic NO-UNDO
         FIELD champ1 AS CHARACTER 
-        FIELD champ2 AS CHARACTER
+        FIELD champ2 AS CHARACTER EXTENT 2 FORMAT "X(3)" INITIAL ["1", "2"]
         INDEX i1 IS PRIMARY UNIQUE champ1.
         
     /*------------------------------------------------------------------------------
@@ -42,12 +53,12 @@ CLASS static.StaticCommentClass:
         FIELD champ2 AS CHARACTER
         INDEX i1 IS PRIMARY UNIQUE champ1.
         
-    
     /*------------------------------------------------------------------------------
-     Purpose: Purpose of Static Variable1
+     Purpose: Purpose of Static Event1
      Notes:
     ------------------------------------------------------------------------------*/
-    DEFINE PRIVATE STATIC VARIABLE Variable1 AS CHARACTER NO-UNDO.
+    DEFINE PUBLIC STATIC EVENT Event1 
+      SIGNATURE VOID (pParam AS CHARACTER).
     
     /*------------------------------------------------------------------------------
      Purpose: Purpose of Static Property1

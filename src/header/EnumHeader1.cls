@@ -12,9 +12,16 @@
 ENUM header.EnumHeader1 FLAGS :  
 
     /* 
-    Enum List 
+    Enum List (not parse)
     */
-    DEFINE ENUM HanSolo = 1
-                LukeSkywalker = 2.
+    DEFINE ENUM /* Comment HanSolo */
+    			HanSolo = 1 
+    			// Comment LukeSkywalker (not parse)
+                AnakinSkywalker = 2 
+                /* Comment Padme */
+                Padme 
+                /* Comment Rey*/
+                LukeSkywalker = Padme, AnakinSkywalker 
+                .
 
 END ENUM.

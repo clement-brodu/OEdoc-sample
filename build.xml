@@ -10,6 +10,7 @@
 	
     <target name="compile">
         <mkdir dir="preprocess" />
+    	<mkdir dir="rcode" />
        	<PCTCompile destDir="rcode" preprocessDir="preprocess" dlcHome="${DLC}">
        	  <fileset dir="src" includes="**/*.cls,**/*.p" />
        	  <propath path="src" />
@@ -18,10 +19,18 @@
    	</target>
 
     <target name="doc">
-        <mkdir dir="doc" />
-        <ABLDuck destDir="doc" dlcHome="${DLC}" title="My Documentation">
-            <fileset dir="preprocess" includes="**/*.cls,**/*.p" />
+        <mkdir dir="docs" />
+        <ABLDuck destDir="docs" title="My Documentation">
+            <fileset dir="preprocess" includes="**/*.cls,**/*.p,**/*.w" />
             <propath path="preprocess" />
+        </ABLDuck>
+    </target>
+	
+    <target name="docsrc">
+        <mkdir dir="docs" />
+        <ABLDuck destDir="docs" title="My Documentation">
+            <fileset dir="src" includes="**/*.cls,**/*.p,**/*.w" />
+            <propath path="src" />
         </ABLDuck>
     </target>
 
