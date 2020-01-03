@@ -20,7 +20,7 @@ ENUM header.EnumHeader1 FLAGS :
                 AnakinSkywalker = 2 
                 /* Comment Padme */
                 Padme 
-                /* Comment Rey*/
+                /* Comment LukeSkywalker*/
                 LukeSkywalker = Padme, AnakinSkywalker 
                 .
 
