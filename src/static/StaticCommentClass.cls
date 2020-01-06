@@ -22,7 +22,6 @@ CLASS static.StaticCommentClass:
     ------------------------------------------------------------------------------*/
         
     CONSTRUCTOR STATIC StaticCommentClass (  ):
-        SUPER ().
         
     END CONSTRUCTOR.
     
@@ -32,7 +31,7 @@ CLASS static.StaticCommentClass:
     ------------------------------------------------------------------------------*/
     DEFINE PRIVATE STATIC TEMP-TABLE ttPrivStatic NO-UNDO
         FIELD champ1 AS CHARACTER 
-        FIELD champ2 AS CHARACTER EXTENT 2 FORMAT "X(3)" INITIAL ["1", "2"]
+        FIELD champ2 AS CHARACTER
         INDEX i1 IS PRIMARY UNIQUE champ1.
         
     /*------------------------------------------------------------------------------
