@@ -21,22 +21,48 @@ CLASS temptable.TempTableComment:
      Notes: 
     ------------------------------------------------------------------------------*/
     DEFINE TEMP-TABLE ttStatic NO-UNDO
-        FIELD champ1 AS CHARACTER /* Comment Champ 1 */
-        FIELD champ2 AS CHARACTER /* Comment Champ 2 */
+        FIELD champ1 AS CHARACTER 
+        FIELD champ2 AS CHARACTER 
         INDEX i1 IS PRIMARY UNIQUE champ1.
         
     /*------------------------------------------------------------------------------
-     Purpose: Purpose of ttStatic
+     Purpose: Purpose of ttSample1
      Notes: 
     ------------------------------------------------------------------------------*/
-    DEFINE TEMP-TABLE ttListe NO-UNDO
+    DEFINE TEMP-TABLE ttSample1 NO-UNDO
+        FIELD champ1 AS CHARACTER 
+        FIELD champ2 AS CHARACTER 
+        INDEX i1 IS PRIMARY UNIQUE champ1.
+        
+    /*------------------------------------------------------------------------------
+     Purpose: Purpose of ttSample2
+     Notes: 
+    ------------------------------------------------------------------------------*/
+    DEFINE TEMP-TABLE ttSample2 NO-UNDO
         FIELD champ1 AS CHARACTER 
         FIELD champ2 AS CHARACTER EXTENT 2
         FIELD champ3 AS CHARACTER FORMAT "X(3)"
         FIELD champ4 AS CHARACTER EXTENT 4 FORMAT "X(3)"
         INDEX i1 IS PRIMARY UNIQUE champ1.    
         
+    /* Purpose of ttSample3 */
+    DEFINE TEMP-TABLE ttSample3 NO-UNDO
+        FIELD champ1 AS CHARACTER
+        FIELD champ2 AS CHARACTER
+        INDEX i1 IS PRIMARY UNIQUE champ1.
         
+    /* Purpose of ttSample4 */
+    DEFINE SHARED TEMP-TABLE ttSample4 NO-UNDO
+        FIELD champ1 AS CHARACTER
+        FIELD champ2 AS CHARACTER
+        INDEX i1 IS PRIMARY UNIQUE champ1.
+        
+    /* Purpose of ttSample5 */
+    DEFINE NEW SHARED TEMP-TABLE ttSample5 NO-UNDO
+        FIELD champ1 AS CHARACTER
+        FIELD champ2 AS CHARACTER
+        INDEX i1 IS PRIMARY UNIQUE champ1.
+    
     
         
 END CLASS.

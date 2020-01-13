@@ -1,4 +1,4 @@
- 
+
  /*------------------------------------------------------------------------
     File        : StaticCommentClass
     Purpose     : Purpose of StaticCommentClass

@@ -10,17 +10,23 @@
     Author(s)   : Han Solo
     Created     : Mon Jan 06 19:09:16 CET 2020
     Notes       :
+    @param pParam1 The Param 1 comment
+    @param pParam2 The Param 2 comment
   ----------------------------------------------------------------------*/
 
 /* ***************************  Definitions  ************************** */
 
 BLOCK-LEVEL ON ERROR UNDO, THROW.
 
+
+DEFINE INPUT  PARAMETER pParam1 AS CHARACTER NO-UNDO.
+DEFINE OUTPUT PARAMETER pParam2 AS CHARACTER NO-UNDO.
+
 /*------------------------------------------------------------------------------
  Purpose: Purpose of ttStatic
  Notes: 
 ------------------------------------------------------------------------------*/
-DEFINE TEMP-TABLE ttStatic NO-UNDO
+DEFINE TEMP-TABLE ttSample NO-UNDO
     FIELD champ1 AS CHARACTER 
     FIELD champ2 AS CHARACTER FORMAT "X(2)"
     FIELD champ3 AS INTEGER EXTENT 2

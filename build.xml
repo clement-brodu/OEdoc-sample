@@ -12,7 +12,7 @@
         <mkdir dir="preprocess" />
     	<mkdir dir="rcode" />
        	<PCTCompile destDir="rcode" preprocessDir="preprocess" dlcHome="${DLC}">
-       	  <fileset dir="src" includes="**/*.cls,**/*.p" />
+       	  <fileset dir="src" includes="**/*.cls,**/*.p,**/*.w" />
        	  <propath path="src" />
        	</PCTCompile>
        	
@@ -28,7 +28,7 @@
 	
     <target name="docsrc">
         <mkdir dir="docs" />
-        <ABLDuck destDir="docs" title="My Documentation">
+        <ABLDuck destDir="docs" title="My Documentation" template="template.zip" encoding="Windows-1252" >
             <fileset dir="src" includes="**/*.cls,**/*.p,**/*.w" />
             <propath path="src" />
         </ABLDuck>
