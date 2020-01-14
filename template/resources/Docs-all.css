@@ -592,8 +592,18 @@ tt {
   background: url(./images/icons.png) no-repeat 0 0;
 }
 .doctabs .icon-class {
-  background: url(./images/icons.png) no-repeat 0 -40px;
+  background: url(./images/class-icon.svg) no-repeat 0 0;
+  background-size: contain;
 }
+.doctabs .icon-enum {
+  background: url(./images/enum-icon.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.doctabs .icon-interface {
+  background: url(./images/interface-icon.svg) no-repeat 0 0;
+  background-size: contain;
+}
+
 .doctabs .icon-constructor {
   background: url(./images/icons.png) no-repeat 0 -240px;
 }
@@ -818,7 +828,16 @@ tt {
   background: url(./images/icons.png) no-repeat 0 0;
 }
 .class-overview .x-toolbar.member-links .icon-class {
-  background: url(./images/icons.png) no-repeat 0 -40px;
+  background: url(./images/class-icon.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.class-overview .x-toolbar.member-links .icon-enum {
+  background: url(./images/enum-icon.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.class-overview .x-toolbar.member-links .icon-interface{
+  background: url(./images/interface-icon.svg) no-repeat 0 0;
+  background-size: contain; 
 }
 .class-overview .x-toolbar.member-links .icon-constructor {
   background: url(./images/icons.png) no-repeat 0 -240px;
@@ -997,7 +1016,16 @@ tt {
   background: url(./images/icons.png) no-repeat 0 0;
 }
 #treecontainer .x-grid-cell-inner .icon-class {
-  background: url(./images/icons.png) no-repeat 0 -40px;
+  background: url(./images/class-icon.svg) no-repeat 0 2px;
+  background-size: contain;
+}
+#treecontainer .x-grid-cell-inner .icon-enum {
+  background: url(./images/enum-icon.svg) no-repeat 0 2px;
+  background-size: contain;
+}
+#treecontainer .x-grid-cell-inner .icon-interface {
+  background: url(./images/interface-icon.svg) no-repeat 0 2px;
+  background-size: contain;
 }
 #treecontainer .x-grid-cell-inner .icon-constructor {
   background: url(./images/icons.png) no-repeat 0 -240px;
@@ -1303,16 +1331,22 @@ tt {
   padding: 0.1em 0 0.4em 2.3em;
 }
 #center-container h1.class .class-source-link {
-  background: url(./images/class-m.png) no-repeat 0 -5px;
+  background: url(./images/class-icon.svg) no-repeat 5px 0;
+  background-size: contain;
+}
+#center-container h1.enum .class-source-link {
+  background: url(./images/enum-icon.svg) no-repeat 5px 0;
+  background-size: contain;
+}
+#center-container h1.interface .class-source-link {
+  background: url(./images/interface-icon.svg) no-repeat 5px 0;
+  background-size: contain;
 }
 #center-container h1.component .class-source-link {
   background: url(./images/component-m.png) no-repeat 0 -5px;
 }
 #center-container h1.singleton .class-source-link {
   background: url(./images/singleton-m.png) no-repeat 0 -5px;
-}
-#center-container h1.interface .class-source-link {
-  background: url(./images/class-m.png) no-repeat 0 -5px;
 }
 #center-container h1.procedure .class-source-link {
   background: url(./images/class-m.png) no-repeat 0 -5px;
@@ -1818,7 +1852,16 @@ tt {
   background: url(./images/icons.png) no-repeat 0 0;
 }
 .members .icon-class {
-  background: url(./images/icons.png) no-repeat 0 -40px;
+  background: url(./images/class-icon.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.members .icon-enum {
+  background: url(./images/enum-icon.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.members .icon-interface {
+  background: url(./images/interface-icon.svg) no-repeat 0 0;
+  background-size: contain;
 }
 .members .icon-constructor {
   background: url(./images/icons.png) no-repeat 0 -240px;

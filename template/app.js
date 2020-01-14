@@ -73200,13 +73200,13 @@ Ext.cmd.derive(
         '<tpl for="uses">',
         '<tpl if="xindex===1"><h4>Uses</h4></tpl>',
         '<div class="dependency">',
-        '{[ values[values.length - 1] == "*" ? "<strong>" + values + "</strong>" : "<a href=\'#!/class/" + values + "\' rel=\'" + values + "\' class=\'docClass\'>" + values + "</a>" ]}',
+        '{[ values[values.length - 1] == "*" ? "<strong>" + values + "</strong>" : this.datatypeLink(values) ]}',
         "</div>",
         "</tpl>",
         '<tpl for="superclasses">',
         '<tpl if="xindex===1"><h4>Hierarchy</h4></tpl>',
         '<div class="subclass<tpl if="xindex===1"> first-child</tpl>" style="{[ xindex > 1 ? "margin-left:" + (15 + (12 * (xindex-2))) + "px; " : "" ]}list-style: none;">',
-        '{[ xindex == xcount ? "<strong>" + values + "</strong>" : "<a href=\'#!/class/" + values + "\' rel=\'" + values + "\' class=\'docClass\'>" + values + "</a>" ]}',
+        '{[ xindex == xcount ? "<strong>" + values + "</strong>" : this.datatypeLink(values) ]}',
         "</div>",
         "</tpl>",
         '<tpl for="subclasses">',
@@ -73705,6 +73705,22 @@ Ext.cmd.derive(
                   "</a>";
                 return Docs.data.classLinkCache[d];
               }
+            }
+            // Search for external class
+            try {
+                
+                let vLink 
+                if (typeof(getCustomHyperlink) === typeof(Function)){
+                    vLink = getCustomHyperlink(d);
+                }
+                
+                if (vLink){
+                    Docs.data.classLinkCache[d] = vLink;
+                    return Docs.data.classLinkCache[d];
+                }
+            } catch (err) {
+                console.log("Could not load customlink");
+                console.log(err);
             }
             return d;
           },
@@ -74330,7 +74346,7 @@ Ext.cmd.derive(
         '<tpl for="uses">',
         '<tpl if="xindex===1"><h4>Uses</h4></tpl>',
         '<div class="dependency">',
-        '{[ values[values.length - 1] == "*" ? "<strong>" + values + "</strong>" : "<a href=\'#!/class/" + values + "\' rel=\'" + values + "\' class=\'docClass\'>" + values + "</a>" ]}',
+        '{[ values[values.length - 1] == "*" ? "<strong>" + values + "</strong>" : this.datatypeLink(values) ]}',
         "</div>",
         "</tpl>",
         '<tpl if="author">',
@@ -74701,6 +74717,7 @@ Ext.cmd.derive(
             if (Docs.data.classLinkCache[d]) {
               return Docs.data.classLinkCache[d];
             }
+            
             for (var c = 0; c < Docs.data.classes.length; c++) {
               var e = Docs.data.classes[c];
               if (e.name == d) {
@@ -74714,6 +74731,22 @@ Ext.cmd.derive(
                   "</a>";
                 return Docs.data.classLinkCache[d];
               }
+            }
+            // Search for exteral class
+            try {
+                
+                let vLink 
+                if (typeof(getCustomHyperlink) === typeof(Function)){
+                    vLink = getCustomHyperlink(d);
+                }
+                
+                if (vLink){
+                    Docs.data.classLinkCache[d] = vLink;
+                    return Docs.data.classLinkCache[d];
+                }
+            } catch (err) {
+                console.log("Could not load customlink");
+                console.log(err);
             }
             return d;
           },
