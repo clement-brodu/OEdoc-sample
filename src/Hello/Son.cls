@@ -7,6 +7,9 @@
     Author(s)   : Han Solo
     Created     : Mon Dec 02 16:34:10 CET 2019
     Notes       : 
+        {@link  Hello.Father see father}  
+        {@link  Hello.Father-method-HelloWorld see father HelloHorld}  
+        {@link  property.PropertyComment-property-property2 see PropertyComment property2}
   ----------------------------------------------------------------------*/
 
 USING Progress.Lang.*.

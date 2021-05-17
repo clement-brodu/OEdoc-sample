@@ -28,10 +28,15 @@
 	
     <target name="docsrc">
         <mkdir dir="docs" />
-        <ABLDuck destDir="docs" title="My Documentation" template="template.zip" encoding="Windows-1252" >
+        <ABLDuck destDir="docs" title="My Documentation" encoding="Windows-1252" >
             <fileset dir="src" includes="**/*.cls,**/*.p,**/*.w" />
             <propath path="src" />
         </ABLDuck>
+		<!--
+		<ABLDuck destDir="docs" title="My Documentation" template="template.zip" encoding="Windows-1252" >
+            <fileset dir="src" includes="**/*.cls,**/*.p,**/*.w" />
+            <propath path="src" />
+        </ABLDuck>-->
     </target>
 
 </project>
